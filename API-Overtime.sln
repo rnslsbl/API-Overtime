@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33801.468
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API-Overtime", "API-Overtime\API-Overtime.csproj", "{8F48E5D5-F927-4C19-BE13-C135B1FE62D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client-Overtime", "Client-Overtime\Client-Overtime.csproj", "{77A19600-1FD7-464F-A3EA-3279AC52B354}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F48E5D5-F927-4C19-BE13-C135B1FE62D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F48E5D5-F927-4C19-BE13-C135B1FE62D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F48E5D5-F927-4C19-BE13-C135B1FE62D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F48E5D5-F927-4C19-BE13-C135B1FE62D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A19600-1FD7-464F-A3EA-3279AC52B354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A19600-1FD7-464F-A3EA-3279AC52B354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A19600-1FD7-464F-A3EA-3279AC52B354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A19600-1FD7-464F-A3EA-3279AC52B354}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {530CB6F1-4B3F-49BC-9D99-C9163FCAB02D}
+	EndGlobalSection
+EndGlobal
