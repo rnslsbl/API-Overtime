@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\coba.css"
     },
     {
+      "Id": "D:\\API-Overtime\\Client-Overtime\\wwwroot\\css\\colvis.css",
+      "PackagePath": "staticwebassets\\css\\colvis.css"
+    },
+    {
       "Id": "D:\\API-Overtime\\Client-Overtime\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -43,6 +47,10 @@
     {
       "Id": "D:\\API-Overtime\\Client-Overtime\\wwwroot\\js\\Overtime.js",
       "PackagePath": "staticwebassets\\js\\Overtime.js"
+    },
+    {
+      "Id": "D:\\API-Overtime\\Client-Overtime\\wwwroot\\js\\colvis.js",
+      "PackagePath": "staticwebassets\\js\\colvis.js"
     },
     {
       "Id": "D:\\API-Overtime\\Client-Overtime\\wwwroot\\js\\fetch.js",

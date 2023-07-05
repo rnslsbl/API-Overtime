@@ -5,6 +5,7 @@ using Client.ViewModels;
 using Client.ViewModels.Payroll;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using NuGet.Protocol.Core.Types;
 
 
 namespace Client.Controllers
@@ -18,6 +19,7 @@ namespace Client.Controllers
         private readonly IAccountRoleRepository accountRoleRepository;
         private readonly IDepartmentRepository departmentRepository;
         private readonly IPayrollRepository payrollRepository;
+       
         public AdminController(IEmployeeRepository repository,
             IEmployeeLevelRepository employeeLevelRepository,
             IAccountRoleRepository accountRoleRepository,
@@ -29,6 +31,7 @@ namespace Client.Controllers
             this.accountRoleRepository = accountRoleRepository;
             this.departmentRepository = departmentRepository;
             this.payrollRepository = payrollRepository;
+           
 
         }
 
@@ -609,10 +612,6 @@ namespace Client.Controllers
             return View(getAllPayroll);
         }
 
-
-
-
-
         [HttpGet]
         public async Task<IActionResult> CreatePayroll()
         {
@@ -707,35 +706,7 @@ namespace Client.Controllers
         }
 
 
-        // Register 
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        /*[ValidateAntiForgeryToken]*/
-        public async Task<IActionResult> CreateRegister(Employee employee)
-        {
-            /*if (ModelState.IsValid)
-            {*/
-            //daaru general repo
-            var result = await repository.Post(employee);
-            if (result.Code == 200)
-            {
-                return RedirectToAction(nameof(GetAllEmployee));
-            }
-            else if (result.Code == 409)
-            {
-                ModelState.AddModelError(string.Empty, result.Message);
-                return View();
-                /* }*/
-            }
-            return RedirectToAction(nameof(GetAllEmployee));
-        }
-
-
+        
 
 
     }

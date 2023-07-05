@@ -134,9 +134,9 @@ namespace Client.Controllers
             else if (result.Code == 200)
             {
                 TempData["Success"] = $"Data has been Successfully Registered! - {result.Message}!";
-                return RedirectToAction("Dashboard", "Home");
+                return RedirectToAction("GetAllEmployee", "Admin");
             }
-            return RedirectToAction("Dashboard", "Home");
+            return RedirectToAction("GetAllEmployee", "Admin");
 
 
         }

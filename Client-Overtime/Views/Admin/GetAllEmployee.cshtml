@@ -39,48 +39,33 @@
         <section class="section">
             <div class="card">
                 <div class="">
-                    </br><a href="@Url.Action("Create","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
+                    </br>@*<a href="@Url.Action("Create","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
                         Add Employee
+                    </a>*@
+                    @*<a href="@Url.Action("Create","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
+                        <div class="d-inline-block me-2 "><i class="bi bi-plus-lg"></i></div> Employee
+                    </a>*@
+                    <a href="@Url.Action("Register","Home")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah" title="Add Employee">
+                        <div class="d-inline-block me-2 "><i class="bi bi-plus-lg"></i></div> Employee
                     </a>
+
                 </div>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
     <thead>
         <tr>
-             <th style="display: none">
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NIK)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BirthDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HiringDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReportTo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DepartmentName)
-            </th>
-            <th>Action</th>
+            <th style="display: none">ID</th>
+            <th>NIK</th>
+            <th>Name</th>
+            <th>Birthdate</th>
+            <th>Gender</th>
+            <th>Hiring Date</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Manager</th>
+            <th>Title</th>
+            <th>Department</th>
+            <th>Action</th>            
         </tr>
     </thead>
     <tbody>
@@ -99,7 +84,19 @@
                 @Html.DisplayFor(modelItem => item.BirthDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gender)
+                @*@Html.DisplayFor(modelItem => item.Gender)*@
+                                        @if (item.Gender == "P")
+                                        {
+                                            <i class="bi bi-gender-female" data-toggle="tooltip" data-placement="top" title="Female" style="color: pink; font-size: 20px;"></i>
+                                        }
+                                        else if (item.Gender == "L")
+                                        {
+                                            <i class="bi bi-gender-male" data-toggle="tooltip" data-placement="top" title="Female" font-size style="color: blue; font-size: 20px;"></i>
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(modelItem => item.Gender)
+                                        }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.HiringDate)
@@ -120,8 +117,14 @@
                 @Html.DisplayFor(modelItem => item.DepartmentName)
             </td>
             <td>
-                <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-success">Edit</a>
-                <a href="@Url.Action("Deletes", new { id = item.Id })" class="btn btn-danger">Delete</a>
+                @*<a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-success">Edit</a>
+                <a href="@Url.Action("Deletes", new { id = item.Id })" class="btn btn-danger">Delete</a>*@
+                                        <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a href="@Url.Action("Deletes", new { id = item.Id })" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </a>
             </td>
         </tr>
 }
@@ -149,3 +152,5 @@
         </div>
     </footer>
 </div>
+
+   

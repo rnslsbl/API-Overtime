@@ -88,11 +88,11 @@ $.ajax({
                 (val.fullname),
                 (val.department),
                 (val.title),
-                "Rp. " + val.allowence.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
+                "Rp. " + val.allowence.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") +"",
                 "Rp. " + val.overtime.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
                 "Rp. " + val.payrollCuts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
                 "Rp. " + val.totalSalary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-                `<button class="btn btn-primary btn-print btn-sm" onclick="printPayslip()">Print Payslip</button>`
+                `<button class="btn btn-secondary btn-print btn-sm" onclick="printPayslip()"><i class="bi bi-printer-fill"></i></i></button>`
             ];
 
             table.row.add(row);

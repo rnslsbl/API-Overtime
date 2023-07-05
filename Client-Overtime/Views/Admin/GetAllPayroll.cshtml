@@ -39,41 +39,26 @@
         <section class="section">
             <div class="card">
                 <div class="">
-                    </br><a href="@Url.Action("CreatePayroll","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
+                    </br>@*<a href="@Url.Action("CreatePayroll","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
                         Add Payroll
+                    </a>*@
+                    <a href="@Url.Action("CreatePayroll","Admin")" class="btn btn-primary float-end me-4" data-toggle="modal" data-target="#modalTambah">
+                        <div class="d-inline-block me-2 "><i class="bi bi-plus-lg"></i></div> Payroll
                     </a>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
                             <tr>
-                                <th style="display: none">
-                                    @Html.DisplayNameFor(model => model.Id)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.PayDate)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Fullname)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Department)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Title)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Allowence)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.Overtime)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.PayrollCuts)
-                                </th>
-                                <th>
-                                    @Html.DisplayNameFor(model => model.TotalSalary)
-                                </th>
+                                <th style="display: none">ID</th>
+                                <th>Pay Date</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Title</th>
+                                <th>Allowance</th>
+                                <th>Fee Overtime</th>
+                                <th>Tax</th>
+                                <th>Total Salary</th>  
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -97,20 +82,24 @@
                                         @Html.DisplayFor(modelItem => item.Title)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Allowence)
+                                        Rp @Html.Raw(string.Format("{0:N0}", item.Allowence))
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Overtime)
+                                        Rp @Html.Raw(string.Format("{0:N0}", item.Overtime))
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.PayrollCuts)
+                                        Rp @Html.Raw(string.Format("{0:N0}", item.PayrollCuts))
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.TotalSalary)
+                                        Rp @Html.Raw(string.Format("{0:N0}", item.TotalSalary))
                                     </td>
                                     <td>
                                         @*<a href="@Url.Action("EditPayroll", new { id = item.Id })" class="btn btn-success">Edit</a>*@
-                                        <a href="@Url.Action("DeletePayroll", new { id = item.Id })" class="btn btn-danger">Delete</a>
+                                        @*<a href="@Url.Action("DeletePayroll", new { id = item.Id })" class="btn btn-danger">Delete</a>*@
+                                        
+                                        <a href="@Url.Action("DeletePayroll", new { id = item.Id })" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="bi bi-trash3-fill"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             }
