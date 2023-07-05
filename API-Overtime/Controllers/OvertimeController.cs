@@ -23,7 +23,7 @@ namespace API_Overtime.Controllers
             _mapperCreate = mapperCreate;
         }
 
-        [Authorize(Roles = "Employee")]
+       
         [HttpPost("OvertimeRequest")]
         public IActionResult Created(OvertimeCreateVM modelVM)
         {
@@ -90,7 +90,7 @@ namespace API_Overtime.Controllers
                     Message = "Seluruh Data Tidak Berhasil Ditampilkan"
                 });
             }
-            return Ok(new ResponseVM<List<OvertimeVM>>
+            return Ok(new ResponseVM<List<OvertimeApprovalVM>>
             {
                 Code = StatusCodes.Status200OK,
                 Status = HttpStatusCode.OK.ToString(),

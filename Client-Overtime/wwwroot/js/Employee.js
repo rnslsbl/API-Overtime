@@ -7,6 +7,31 @@ function closeModal() {
 }
 
 
+$(document).ready(function () {
+    var startOvertimeInput = $('#startOvertimeX');
+    var endOvertimeInput = $('#endOvertime');
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    var twoDaysAgo = new Date();
+    twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
+    twoDaysAgo.setHours(0, 0, 0, 0);
+
+    var tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+
+    startOvertimeInput.attr('min', twoDaysAgo.toISOString().slice(0, -8));
+    startOvertimeInput.attr('max', tomorrow.toISOString().slice(0, -8));
+    endOvertimeInput.attr('min', twoDaysAgo.toISOString().slice(0, -8));
+    endOvertimeInput.attr('max', tomorrow.toISOString().slice(0, -8));
+});
+
+
+
+
+
 
 $(document).ready(function () {
     var startOvertime = $('#endOvertime');

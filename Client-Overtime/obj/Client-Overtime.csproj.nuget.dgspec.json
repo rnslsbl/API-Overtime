@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj": {}
+    "D:\\MetroData Camp\\Segment 4\\Payroll\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj": {}
   },
   "projects": {
-    "D:\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj": {
+    "D:\\MetroData Camp\\Segment 4\\Payroll\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj",
+        "projectUniqueName": "D:\\MetroData Camp\\Segment 4\\Payroll\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj",
         "projectName": "Client-Overtime",
-        "projectPath": "D:\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj",
-        "packagesPath": "C:\\Users\\ronas\\.nuget\\packages\\",
-        "outputPath": "D:\\API-Overtime\\Client-Overtime\\obj\\",
+        "projectPath": "D:\\MetroData Camp\\Segment 4\\Payroll\\API-Overtime\\Client-Overtime\\Client-Overtime.csproj",
+        "packagesPath": "C:\\Users\\Juragan\\.nuget\\packages\\",
+        "outputPath": "D:\\MetroData Camp\\Segment 4\\Payroll\\API-Overtime\\Client-Overtime\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ronas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Juragan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -77,6 +76,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.15, 6.0.15]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

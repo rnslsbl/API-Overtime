@@ -8,8 +8,9 @@ namespace API_Overtime.Contracts
     {
         Overtime CreateRequest(Overtime overtime);
         int ApprovalOvertime(Overtime overtime,Guid id);
-        List<OvertimeVM> ListOvertimeByIdManager(Guid idManager);
-        IEnumerable<OvertimeVM> ListOvertimeByIdEmployee(Guid idEmployee);
+        List<OvertimeApprovalVM> ListOvertimeByIdManager(Guid managerId);
+
+		IEnumerable<OvertimeVM> ListOvertimeByIdEmployee(Guid idEmployee);
 
         IEnumerable<OvertimeRemainingVM> ListRemainingOvertime();
         IEnumerable<OvertimeRemainingVM> ListRemainingOvertimeByGuid(Guid id);
