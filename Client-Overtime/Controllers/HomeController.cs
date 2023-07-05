@@ -54,8 +54,8 @@ namespace Client.Controllers
             }
             var token = jwtToken.Data;
             var claim = ExtractClaims(token);
-            var roleClaim = claim.FirstOrDefault(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role");
-            var role = roleClaim != null ? roleClaim.Value : null;
+            var role = claim.Where(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role").Select(a => a.Value).LastOrDefault();
+            /*var role = roleClaim != null ? roleClaim.Value : null;*/
             var idClaim = claim.FirstOrDefault(c => c.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid");
             var id = idClaim != null ? idClaim.Value : null;
             if (token == null)

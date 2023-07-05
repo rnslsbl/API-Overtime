@@ -20,7 +20,7 @@ $.ajax({
                 { title: 'Submit Date', data: 'submitDate' },
                 { title: 'Deskripsi', data: 'deskripsi' },
                 { title: 'Paid', data: 'paid' },
-                { title: 'Actions', data: null }
+                /*{ title: 'Actions', data: null }*/
             ],
             columnDefs: [
                 {

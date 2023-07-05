@@ -76,7 +76,7 @@ $.ajax({
                 { title: 'Overtime' },
                 { title: 'Salary Cuts' },
                 { title: 'Total Salary' },
-                { title: 'Actions' }
+                /*{ title: 'Actions' }*/
                 
             ]
         });

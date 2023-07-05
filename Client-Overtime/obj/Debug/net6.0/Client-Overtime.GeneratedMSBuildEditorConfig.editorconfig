@@ -28,12 +28,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRGVwYXJ0bWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/API-Overtime/Client-Overtime/Views/Admin/CreateEmployeeLevel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRW1wbG95ZWVMZXZlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/API-Overtime/Client-Overtime/Views/Admin/CreatePayroll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUGF5cm9sbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/API-Overtime/Client-Overtime/Views/Admin/DeleteDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRGVwYXJ0bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/API-Overtime/Client-Overtime/Views/Admin/DeleteEmployeeLevel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlRW1wbG95ZWVMZXZlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/API-Overtime/Client-Overtime/Views/Admin/DeletePayroll.cshtml]
@@ -58,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/API-Overtime/Client-Overtime/Views/Admin/EditDepartment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdERlcGFydG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/API-Overtime/Client-Overtime/Views/Admin/EditEmployeeLevel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEVtcGxveWVlTGV2ZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/API-Overtime/Client-Overtime/Views/Admin/EditPayroll.cshtml]
