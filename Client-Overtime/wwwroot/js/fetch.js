@@ -78,7 +78,11 @@ function fetchGenderChartData() {
 }
 
 function fetchRemainingOvertimeData() {
-    fetch("https://localhost:7044/API-Payroll/Overtime/ListRemainingOvertimeEmployee")
+    fetch(`https://localhost:7044/API-Payroll/Overtime/ListRemainingByManagerGuid/${primarysid}`, {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    })
         .then((response) => response.json())
         .then((data) => {
             const users = data.data;
@@ -103,7 +107,7 @@ function fetchRemainingOvertimeData() {
                 },
                 plotOptions: {
                     bar: {
-                        columnWidth: "45%",
+                        columnWidth: "50%",
                         distributed: true,
                     },
                 },

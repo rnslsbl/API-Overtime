@@ -31,8 +31,8 @@ $.ajax({
                 moment(val.submitDate).locale('id').format('DD MMMM YYYY'),
                 "Rp. " + val.paid.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
                 getStatusBadge(val.status),
-                `<button hidden class="btn btn-danger btn-delete" onclick="deleteRow(${val.id})">Delete</button>`/*,
-                `<button class="btn btn-primary btn-print" onclick="printPayslip(${val.id})">Print Payslip</button>`*/
+                `<button hidden class="btn btn-danger btn-delete" onclick="deleteRow(${val.id})">Delete</button>`,
+                `<button class="btn btn-primary btn-print" onclick="printPayslip(${val.id})">Print Payslip</button>`
 
             ];
 
@@ -76,7 +76,7 @@ $.ajax({
                 { title: 'Overtime' },
                 { title: 'Salary Cuts' },
                 { title: 'Total Salary' },
-                /*{ title: 'Actions' }*/
+                { title: 'Actions' }
                 
             ]
         });

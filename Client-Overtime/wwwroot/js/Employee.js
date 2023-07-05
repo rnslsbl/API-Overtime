@@ -77,9 +77,15 @@ $(document).ready(function () {
         var startDateTime = new Date(startOvertime.val());
         var endDateTime = new Date(endOvertime.val());
 
-        var today = new Date(); 
-        if (startDateTime < today) {
-            startOvertime.get(0).setCustomValidity("Tanggal mulai overtime tidak boleh lebih kecil dari hari ini.");
+        var selectedDay = startDateTime.getDay();
+
+
+        var today = new Date();
+        var lastday = new Date();
+        lastday.setDate(today.getDate() - 2);
+
+        if (selectedDay > today.getDay() || selectedDay < lastday.getDay()) {
+            startOvertime.get(0).setCustomValidity("Pengajuan Claim Overtime Maksimal 2 Sebelum Hari Ini !");
         } else {
             startOvertime.get(0).setCustomValidity('');
         }
