@@ -23,7 +23,7 @@ namespace API_Overtime.Controllers
             _mapperCreate = mapperCreate;
         }
 
-        [Authorize(Roles = "Employee")]
+       
         [HttpPost("OvertimeRequest")]
         public IActionResult Created(OvertimeCreateVM modelVM)
         {

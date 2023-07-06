@@ -18,7 +18,7 @@ $.ajax({
                 { title: 'Start Overtime', data: 'startOvertime' },
                 { title: 'End Overtime', data: 'endOvertime' },
                 { title: 'Submit Date', data: 'submitDate' },
-                { title: 'Deskripsi', data: 'deskripsi' },
+                { title: 'Description', data: 'deskripsi' },
                 { title: 'Paid', data: 'paid' },
                 /*{ title: 'Actions', data: null }*/
             ],
@@ -56,8 +56,8 @@ $.ajax({
                 {
                     targets: 7,
                     render: function (data, type, row, meta) {
-                        return `<button class="btn btn-success btn-delete" id="approved" onclick="Approved(${meta.row})">Approved</button>` +
-                            `<button class="btn btn-danger btn-delete" id="rejected" onclick="Rejected(${meta.row})">Rejected</button>`;
+                        return `<button class="btn btn-success btn-delete" id="approved" onclick="Approved(${meta.row})"><i class="fas fa-check"></i>Approved</button>` +
+                            `<button class="btn btn-danger btn-delete" id="rejected" onclick="Rejected(${meta.row})"><i class="fas fa-times"></i> Rejected</button>`;
                     }
                 }
             ]

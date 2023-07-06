@@ -377,7 +377,7 @@ namespace API_Overtime.Repositories
             }
         }
 
-        public List<OvertimeVM> ListOvertimeByIdManager(Guid managerId) {
+        public List<OvertimeApprovalVM> ListOvertimeByIdManager(Guid managerId) {
             try
             {
                 var query = _context.Employees
@@ -385,9 +385,10 @@ namespace API_Overtime.Repositories
                 .Join(_context.Overtimes,
                     emp => emp.Id,
                     ov => ov.Employee_id,
-                    (emp, ov) => new OvertimeVM
+                    (emp, ov) => new OvertimeApprovalVM
                     {
                         Id = ov.Id,
+                        Fullname = emp.FirstName +" "+ emp.LastName,
                         StartOvertime = ov.StartOvertime,
                         EndOvertime = ov.EndOvertime,
                         SubmitDate = ov.SubmitDate,
@@ -440,10 +441,12 @@ namespace API_Overtime.Repositories
                     (ov, emp) => new
                     {
                         guid = emp.Id,
+                        fullname = emp.FirstName +" "+ emp.LastName,
                         total = (ov.EndOvertime - ov.StartOvertime).TotalHours
                     }).ToList().GroupBy(a => a.guid).Select(b => new OvertimeRemainingVM
                     {
                         Employee_id = b.Key,
+                        Fullname = b.First().fullname,
                         RemainingOvertime = Convert.ToInt32(40 - b.Sum(c => c.total))
                     }).ToList();
             return overtimeRemaining;
