@@ -100,41 +100,13 @@ namespace API_Overtime.Repositories
             }
         }
 
-        /*public IEnumerable<PayrollPrintVM> GetAllDetailPayrolls()
-        {
-            var today = DateTime.Today;
-            var targetDate = new DateTime(today.Year, today.Month, 25);
-            
-
-            var modelsVM = _context.Payrolls
-                            .Join(_context.Employees, p => p.Employee_id, e => e.Id, (p, e) => new { p, e })
-                            .Join(_context.EmployeeLevels, pe => pe.e.EmployeeLevel_id, el => el.Id, (pe, el) => new { pe, el })
-                            .Join(_context.Overtimes, pel => pel.pe.e.Id, o => o.Employee_id, (pel, o) => new { pel, o })
-                            .Join(_context.Departments, pelo => pelo.pel.pe.e.Department_id, d => d.Id, (pelo, d) => new PayrollPrintVM
-                            {
-                                Id = pelo.pel.pe.p.Id,
-                                PayDate = pelo.pel.pe.p.PayDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")),
-                                Fullname = pelo.pel.pe.e.FirstName + " " + pelo.pel.pe.e.LastName,
-                                Department = d.Name,
-                                Title = pelo.pel.el.Title,
-                                Allowence = pelo.pel.el.Allowence,
-                                Overtime = _context.Overtimes.Where(a => a.Employee_id == pelo.pel.pe.e.Id && a.SubmitDate.Day <= targetDate.Day && a.Status == Status.Approved)
-                                                     .Select(a => a.Paid).Sum(),
-                                PayrollCuts = pelo.pel.pe.p.PayrollCuts,
-                                TotalSalary = pelo.pel.pe.p.TotalSalary,
-                                Employee_id = pelo.pel.pe.e.Id
-                            }).Distinct()
-                            .ToList();
-
-            return modelsVM;
-        }*/
-
+        
         public IEnumerable<PayrollPrintVM> GetAllDetailPayrolls()
         {
             var today = DateTime.Today;
             var targetDate = new DateTime(today.Year, today.Month, 25);
 
-            var modelsVM = _context.Payrolls
+            var modelsVM = GetAll()
                             .Join(_context.Employees, p => p.Employee_id, e => e.Id, (p, e) => new { p, e })
                             .Join(_context.EmployeeLevels, pe => pe.e.EmployeeLevel_id, el => el.Id, (pe, el) => new { pe, el })
                             .Join(_context.Overtimes, pel => pel.pe.e.Id, o => o.Employee_id, (pel, o) => new { pel, o })
@@ -154,6 +126,28 @@ namespace API_Overtime.Repositories
                             }).Distinct()
                             .ToList();
 
+
+
+            /*var modelsVM = _context.Payrolls
+                            .Join(_context.Employees, p => p.Employee_id, e => e.Id, (p, e) => new { p, e })
+                            .Join(_context.EmployeeLevels, pe => pe.e.EmployeeLevel_id, el => el.Id, (pe, el) => new { pe, el })
+                            .Join(_context.Overtimes, pel => pel.pe.e.Id, o => o.Employee_id, (pel, o) => new { pel, o })
+                            .Join(_context.Departments, pelo => pelo.pel.pe.e.Department_id, d => d.Id, (pelo, d) => new PayrollPrintVM
+                            {
+                                Id = pelo.pel.pe.p.Id,
+                                PayDate = pelo.pel.pe.p.PayDate.ToString("dd MMMM yyyy", new CultureInfo("id-ID")),
+                                Fullname = pelo.pel.pe.e.FirstName + " " + pelo.pel.pe.e.LastName,
+                                Department = d.Name,
+                                Title = pelo.pel.el.Title,
+                                Allowence = pelo.pel.el.Allowence,
+                                Overtime = _context.Overtimes.Where(a => a.Employee_id == pelo.pel.pe.e.Id && a.SubmitDate.Day <= targetDate.Day && a.Status == Status.Approved)
+                                                     .Select(a => a.Paid).Sum(),
+                                PayrollCuts = pelo.pel.pe.p.PayrollCuts,
+                                TotalSalary = pelo.pel.pe.p.TotalSalary,
+                                Employee_id = pelo.pel.pe.e.Id
+                            }).Distinct()
+                            .ToList();
+*/
             return modelsVM;
         }
 

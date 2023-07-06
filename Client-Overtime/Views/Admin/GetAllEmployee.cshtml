@@ -57,9 +57,9 @@
             <th style="display: none">ID</th>
             <th>NIK</th>
             <th>Name</th>
-            <th>Birthdate</th>
+            <th style="display: none">Birthdate</th>
             <th>Gender</th>
-            <th>Hiring Date</th>
+            <th style="display: none">Hiring Date</th>
             <th>Email</th>
             <th>Phone Number</th>
             <th>Manager</th>
@@ -80,7 +80,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FullName)
             </td>
-            <td>
+                                    <td style="display: none">
                 @Html.DisplayFor(modelItem => item.BirthDate)
             </td>
             <td>
@@ -98,7 +98,7 @@
                                             @Html.DisplayFor(modelItem => item.Gender)
                                         }
             </td>
-            <td>
+                                    <td style="display: none">
                 @Html.DisplayFor(modelItem => item.HiringDate)
             </td>
             <td>

@@ -77,7 +77,7 @@ namespace Client.Controllers
             }
             else if (role.Contains("Admin"))
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("GetAllEmployee", "Admin");
             }
             else
             {

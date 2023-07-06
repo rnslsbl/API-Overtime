@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Index";
-    Layout = null;
+    Layout = "_DashboardLayout";
 }
 
 <head>
@@ -115,9 +115,9 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class="sidebar-item">
-                            <a href="/Home/Index" class="sidebar-link">
+                            <a href="javascript:history.back()" class="sidebar-link">
                                 <i class="bi bi-house-fill"></i>
-                                <span>Home</span>
+                                <span>Back</span>
                             </a>
                         </li>
                         <li class="sidebar-item has-sub">
@@ -160,9 +160,7 @@
                                 <li class="submenu-item">
                                     <a href="/Manager/Profile">Profile</a>
                                 </li>
-                               @* <li class="submenu-item">
-                                    <a href="/Manager/Payslip">Payslip</a>
-                                </li>*@
+                               
                             </ul>
                         </li>
                         <li class="sidebar-item has-sub">
@@ -284,11 +282,7 @@
 
                         <div class="features-content">
 
-                            <p class="features-content-subtitle">
-                                <ion-icon name="sparkles"></ion-icon>
-
-                                <span>CREATIVE FEATURES</span>
-                            </p>
+                            
 
                             <h3 class="features-content-title">
                                 Claim <strong>Your</strong> Overtime <strong>Request</strong> Here
@@ -329,11 +323,7 @@
 
                         <div class="features-content">
 
-                            <p class="features-content-subtitle">
-                                <ion-icon name="sparkles"></ion-icon>
-
-                                <span>CREATIVE FEATURES</span>
-                            </p>
+                            
 
                             <h3 class="features-content-title">
 

@@ -20,7 +20,7 @@ namespace API_Overtime.Repositories
             try
             {
                 var remainingOvertime = RemainingOvertimeByEmployeeGuid(overtime.Employee_id);
-                var existingOvertime = _context.Overtimes.FirstOrDefault(a => a.StartOvertime.Day == overtime.StartOvertime.Day);
+                var existingOvertime = ListOvertimeByIdEmployee(overtime.Employee_id).FirstOrDefault(a => a.StartOvertime.Day == overtime.StartOvertime.Day);
                 if (remainingOvertime.RemainingOvertime > 0 && existingOvertime == null)
                 {
                     var employee = _context.Employees.Where(e => e.Id == overtime.Employee_id)
@@ -122,7 +122,8 @@ namespace API_Overtime.Repositories
             }
         }
 
-        public List<OvertimeApprovalVM> ListOvertimeByIdManager(Guid managerId)
+        public List<OvertimeApprovalVM> ListOvertimeByIdManager(Guid managerId
+            )
         {
             try
             {

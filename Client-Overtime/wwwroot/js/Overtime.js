@@ -92,7 +92,7 @@ $.ajax({
                 "Rp. " + val.overtime.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
                 "Rp. " + val.payrollCuts.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
                 "Rp. " + val.totalSalary.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."),
-                `<button class="btn btn-secondary btn-print btn-sm" onclick="printPayslip()"><i class="bi bi-printer-fill"></i></i></button>`
+                `<button class="btn btn-secondary btn-print btn-md" onclick="printPayslip()"><i class="bi bi-printer-fill p-2"></i></i></button>`
             ];
 
             table.row.add(row);
@@ -312,7 +312,7 @@ function printPayslip() {
                               </td>
                             </tr>
                             <tr>
-                              <td class="cell">Pajak</td>
+                              <td class="cell">Pph &plus; Bpjs</td>
                               <td class="cell"></td>
                               <td class="cell" style="float: right">
                                 <span class="data">${row[7]}</span>
@@ -401,7 +401,7 @@ function printPayslip() {
                           <p
                             style="
                               color: #210b82;
-                              font-size: 6px;
+                              font-size: 10px;
                               font-weight: 600;
                             "
                           >
