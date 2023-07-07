@@ -38,6 +38,7 @@ namespace API_Overtime.Repositories
                             LastName = emp.LastName,
                             Email = emp.Email,
                             Name = rl.Name,
+                            employee_id = emp.Id
 
                         };
 

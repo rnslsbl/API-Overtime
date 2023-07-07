@@ -105,36 +105,50 @@
                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-item has-sub">
+                        <li class="sidebar-item">
                             <a href="#" class="sidebar-link">
                                 <i class="bi bi-lock-fill"></i>
                                 <span>HR</span>
                             </a>
-                            <ul class="submenu">
-                                <li class="submenu-item">
-                                    <a href="/Admin/GetAllEmployee">Data Employee</a>
+                            </li>
+                               @* <li class="sidebar-item">
+                                     <a href="/Home/Index" class="sidebar-link">
+                                        <span>Home</span>
+                                     </a>
+                                </li>*@
+                                <li class="sidebar-item">
+                                    <a href="/Admin/GetAllEmployee" class="sidebar-link">
+                                        <span>Data Employee</span>
+                                    </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Admin/GetAllPayroll">Data Payroll</a>
+                                <li class="sidebar-item">
+                                     <a href="/Admin/GetAllPayroll" class="sidebar-link">
+                                        <span>Data Payroll</span>
+                                    </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Admin/GetAllMasterAccountRole">Data Account Role</a>
+                                <li class="sidebar-item">
+                                    <a href="/Admin/GetAllMasterAccountRole" class="sidebar-link">
+                                        <span>Data Account Role </span>
+                                     </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Admin/ListDepartment">Data Department</a>
+                                <li class="sidebar-item">
+                                     <a href="/Admin/ListDepartment" class="sidebar-link">
+                                        <span>Data Department</span>
+                                     </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Admin/ListEmployeeLevel">Data Employee Level</a>
+                                <li class="sidebar-item">
+                                    <a href="/Admin/ListEmployeeLevel" class="sidebar-link">
+                                        <span>Data Employee Level</span>
+                                    </a>
                                 </li>
                                 
-                            </ul>
-                        </li>
-                        <li class="sidebar-item has-sub">
+                            
+                        <li class="sidebar-item has-sub" hidden>
                             <a href="#" class="sidebar-link">
                                 <i class="bi bi-person-video"></i>
                                 <span>Manager</span>
                             </a>
-                            <ul class="submenu">
+                            <ul hidden class="submenu">
                                 <li class="submenu-item">
                                     <a href="/Manager/Index">Dashboard</a>
                                 </li>
@@ -150,7 +164,7 @@
                                 </li>*@
                             </ul>
                         </li>
-                        <li class="sidebar-item has-sub">
+                        <li class="sidebar-item has-sub" hidden>
                             <a href="#" class="sidebar-link">
                                 <i class="bi bi-people-fill"></i>
                                 <span>Employee</span>

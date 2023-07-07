@@ -24,7 +24,17 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
     <!-- custom css -->
     <link href="~/css/site.css" rel="stylesheet" />
+    <style>
+        #chart-container {
+            max-width: 600px;
+            margin: 20px auto;
+        }
 
+        #charta {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -97,7 +107,7 @@
                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-item has-sub">
+                        <li class="sidebar-item has-sub" hidden>
                             <a href="#" class="sidebar-link">
                                 <i class="bi bi-lock-fill"></i>
                                 <span>HR</span>
@@ -121,27 +131,29 @@
                                 
                             </ul>
                         </li>
-                        <li class="sidebar-item has-sub">
-                            <a href="#" class="sidebar-link">
-                                <i class="bi bi-person-video"></i>
-                                <span>Manager</span>
-                            </a>
-                            <ul class="submenu">
-                                <li class="submenu-item">
-                                    <a href="/Manager/Index">Dashboard</a>
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link">
+                                       <i class="bi bi-person-video"></i>
+                                    <span>Manager</span>
+                                    </a>
+                            
+                                <li class="sidebar-item">
+                                    <a href="/Manager/Index" class="sidebar-link">
+                                        <span>Dashboard</span>
+                                    </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Manager/List">Overtime Request</a>
+                                <li class="sidebar-item">
+                                    <a href="/Manager/List" class="sidebar-link">
+                                        <span>Overtime Request</span>
+                                    </a>
                                 </li>
-                                <li class="submenu-item">
-                                    <a href="/Manager/Profile">Profile</a>
+                                <li class="sidebar-item">
+                                    <a href="/Manager/Profile" class="sidebar-link">
+                                        <span>Profile</span>
+                                    </a>
                                 </li>
-                                @*<li class="submenu-item">
-                                    <a href="/Manager/Payslip">Payslip</a>
-                                </li>*@
-                            </ul>
-                        </li>
-                        <li class="sidebar-item has-sub">
+                        
+                        <li class="sidebar-item has-sub" hidden>
                             <a href="#" class="sidebar-link">
                                 <i class="bi bi-people-fill"></i>
                                 <span>Employee</span>
@@ -200,7 +212,8 @@
     <script type="text/javascript" src="https://momentjs.com/downloads/moment-with-locales.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- custom js -->
-    <script src="~/js/manager.js"></script>
+    <script src="~/js/fetch.js"></script>
+    <script src="~/js/Manager.js"></script>
 
 
 </body>

@@ -53,6 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow-y: auto;
         }
 
         #auth {
@@ -68,6 +69,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: #ffff;
+
         }
 
         .auth-logo {
@@ -129,142 +131,135 @@
             </p>
 
             <form action="Register" method="post">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group position-relative has-icon-left mb-3" hidden>
                     <div class="form-control-icon" >
                         <i class="bi bi-envelope"></i>
                     </div>
-                @*<label asp-for="NIK" class="control-label"></label>*@
+                <label asp-for="NIK" class="control-label"></label>
                 <input asp-for="NIK" class="form-control form-control-md" type="text" placeholder="NIK"/>
                 <span asp-validation-for="NIK" class="text-danger"></span>
-            </div>
+                </div>
 
                 <div class="form-group position-relative has-icon-left mb-3">
-                    <div class="form-control-icon">
-                        <i class="bi bi-person"></i>
-                    </div>
-                @*<label asp-for="FirstName" class="control-label"></label>*@
+                        <div class="form-control-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+                    @*<label asp-for="FirstName" class="control-label"></label>*@
                     <input asp-for="FirstName" class="form-control form-control-md" type="text" placeholder="First Name" required />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                 </div>
+
                 <div class="form-group position-relative has-icon-left mb-3">
-                    <div class="form-control-icon">
-                        <i class="bi bi-person"></i>
-                    </div>
-                @*<label asp-for="LastName" class="control-label"></label>*@
+                        <div class="form-control-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+                   @* <label asp-for="LastName" class="control-label"></label>*@
                     <input asp-for="LastName" class="form-control form-control-md" type="text" placeholder="Last Name" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-                <div class="form-group position-relative">
-                    
-                    <label asp-for="BirthDate" class="control-label"></label>
-                    <input asp-for="BirthDate" class="form-control form-control-md" placeholder="Birthdate" />
-                <span asp-validation-for="BirthDate" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group position-relative">    
+                    <label asp-for="BirthDate" class="control-label">Birth Date</label>
+                    <input asp-for="BirthDate" class="form-control form-control-md" placeholder="Birth Date" />
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
 
 
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-gender-male-female"></i>
                     </div>
+                    <label asp-for="Gender" class="control-label"></label><br />
                     <div class="form-check form-check-inline">
-                @*<label asp-for="Gender" class="control-label"></label>*@
-                        <input asp-for="Gender" class="form-check-input" type="radio" name="gender" id="gender-male" value="L"/>
                         <label class="form-check-label" for="gender-male">
                             Laki-Laki
                         </label>
+                        <input asp-for="Gender" class="form-check-input" type="radio" name="gender" id="gender-male" value="L" />
                     </div>
                     <div class="form-check form-check-inline">
-                        <input asp-for="Gender" class="form-check-input" type="radio" name="gender" id="gender-female" value="P">
                         <label class="form-check-label" for="gender-female">
                             Perempuan
                         </label>
+                        <input asp-for="Gender" class="form-check-input" type="radio" name="gender" id="gender-female" value="P">
                     </div>
-                <span asp-validation-for="Gender" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
 
 
-
-
-                <div class="form-group position-relative">
-                    
-                <label asp-for="HiringDate" class="control-label"></label>
+                <div class="form-group position-relative">  
+                    <label asp-for="HiringDate" class="control-label"></label>
                     <input asp-for="HiringDate" class="form-control form-control-md" placeholder="Hiring Date" />
-                <span asp-validation-for="HiringDate" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="HiringDate" class="text-danger"></span>
+                </div>
+
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-envelope"></i>
                     </div>
-                @*<label asp-for="Email" class="control-label"></label>*@
+                    @*<label asp-for="Email" class="control-label"></label>*@
                     <input asp-for="Email" class="form-control form-control-md" type="email" placeholder="Email" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-telephone"></i>
                     </div>
-                @*<label asp-for="PhoneNumber" class="control-label"></label>*@
+                    @*<label asp-for="PhoneNumber" class="control-label"></label>*@
                     <input asp-for="PhoneNumber" class="form-control form-control-md" type="text" placeholder="Phone Number" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group" hidden>
-                <label asp-for="ReportTo" class="control-label"></label>
-                <input asp-for="ReportTo" class="form-control" />
-                <span asp-validation-for="ReportTo" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group" >
+                   @* <label asp-for="ReportTo" class="control-label"></label>*@
+                    <select asp-for="ReportTo" id="manager"class="form-control" ></select>
+                    <span asp-validation-for="ReportTo" class="text-danger"></span>
+                </div>
+                
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-person-badge"></i>
                     </div>
-                @*<label asp-for="EmployeeLevel_id" class="control-label"></label>*@
-                    <input asp-for="EmployeeLevel_id" class="form-control form-control-md" type="text" placeholder="Employee Level ID" />
-                    @*<select asp-for="EmployeeLevel_id">
-                        @foreach( var item in ViewBag.empLevel)
-                        {
-                            <option asp-for="EmployeeLevel_id" value="@item.id"> @item.Title </option>
-                        }
+                    <select asp-for="EmployeeLevel_id" id="employeeleveldropdown" class="form-control form-control-md" type="text" placeholder="Employee Level ID"></select>
 
-                    </select>*@
                     <span asp-validation-for="EmployeeLevel_id" class="text-danger"></span>
-            </div>
+                </div>
+                
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-building"></i>
                     </div>
-                @*<label asp-for="Department_id" class="control-label"></label>*@
-                    <input asp-for="Department_id" class="form-control form-control-md" type="text" placeholder="Department ID"/>
-                    @*<select asp-for="Department_id">
-                        @foreach (var item in ViewBag.deptName)
-                        {
-                            <option asp-for="Department_id" value="@item.id"> @item.Name </option>
-                        }
+                    <select asp-for="Department_id" id="departmentdropdown" class="form-control form-control-md" type="text" placeholder="Department ID"> </select>
 
-                    </select>*@
-                <span asp-validation-for="Department_id" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="Department_id" class="text-danger"></span>
+                </div>
+                
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-shield-lock"></i>
                     </div>
-                @*<label asp-for="Password" class="control-label"></label>*@
+                    @*<label asp-for="Password" class="control-label"></label>*@
                     <input asp-for="Password" class="form-control form-control-md" type="password" placeholder="Password"/>
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                
                 <div class="form-group position-relative has-icon-left mb-3">
                     <div class="form-control-icon">
                         <i class="bi bi-shield-lock"></i>
                     </div>
-                @*<label asp-for="ConfirmPassword" class="control-label"></label>*@
+                    @*<label asp-for="ConfirmPassword" class="control-label"></label>*@
                     <input asp-for="ConfirmPassword" class="form-control form-control-md" type="password" placeholder="Confirm Password" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
             @*<div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>*@
                 <button class="btn btn-primary btn-block btn-md shadow-lg mt-4">
                     Register
                 </button>
+          
         </form>
             @*<div class="text-center mt-5 text-md fs-6">
                 <p class="text-gray-600">
@@ -276,3 +271,67 @@
     </div>
 
 </body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:7044/API-Payroll/Department",
+            data: "",
+            success: function (data) {
+                console.log(data)
+                console.log(data.data.length)
+                var s = '<option value="">Pilih department</option>';
+                for (var i = 0; i < data.data.length; i++) {
+                    console.log(data.data[i])
+                    s += `<option value="${data.data[i].id}">${data.data[i].name}</option>`;
+                }
+                $("#departmentdropdown").html(s);
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:7044/API-Payroll/EmployeeLevel",
+            data: "",
+            success: function (data) {
+                console.log(data)
+                console.log(data.data.length)
+                var s = '<option value="">Pilih Employee Level</option>';
+                for (var i = 0; i < data.data.length; i++) {
+                    console.log(data.data[i])
+                    s += `<option value="${data.data[i].id}">${data.data[i].title} - ${data.data[i].level}</option>`;
+                }
+                $("#employeeleveldropdown").html(s);
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:7044/API-Payroll/AccountRole/GetAllMasterAccountRole",
+            data: "",
+            success: function (data) {
+                console.log(data)
+                console.log(data.data.length)
+                var s = '<option value="">Pilih Manager</option>';
+                var addReportTo = [];
+
+                for (var i = 0; i < data.data.length; i++) {
+                    if (data.data[i].name == "Manager") {
+                        s += `<option value="${data.data[i].employee_id}">${data.data[i].firstName} ${data.data[i].lastName}</option>`;
+                        addReportTo.push(data.data[i].reportTo);
+                    }
+                    console.log(data.data[i])
+
+                }
+                $("#manager").html(s);
+            }
+        });
+    });
+</script>

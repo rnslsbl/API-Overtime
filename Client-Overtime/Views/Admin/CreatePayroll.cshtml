@@ -150,8 +150,8 @@
                 <span asp-validation-for="TotalSalary" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Employee_id" class="control-label"></label>
-                <input asp-for="Employee_id" class="form-control" />
+                @*<label asp-for="Employee_id" class="control-label"></label>*@
+                <select asp-for="Employee_id" id="payrolldata" class="form-control"></select>
                 <span asp-validation-for="Employee_id" class="text-danger"></span>
             </div>
                 <button class="btn btn-primary btn-block btn-md shadow-lg mt-4">
@@ -167,6 +167,27 @@
 
 
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: "https://localhost:7044/API-Payroll/Employee",
+            data: "",
+            success: function (data) {
+                console.log(data)
+                console.log(data.data.length)
+                var s = '<option value="">Pilih Employee</option>';
+                for (var i = 0; i < data.data.length; i++) {
+                    console.log(data.data[i])
+                    var fullName = data.data[i].firstName + " " + data.data[i].lastName;
+                    s += `<option value="${data.data[i].id}">${data.data[i].nik} - ${fullName}</option>`;
+                }
+                $("#payrolldata").html(s);
+            }
+        });
+    });
+    </script>
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
